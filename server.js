@@ -4,6 +4,8 @@ if(process.env.NODE_ENV !== 'production'){
 
 const express = require('express')
 const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
+
 
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -15,8 +17,9 @@ app.set('views', __dirname+'/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
+app.use(express.urlencoded({extended:false}))
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true}
+mongoose.connect(process.env.DATABASE_URL
     ).then(() => console.log('MongoDB Connected')
     ).catch(err => console.log(err))
 
