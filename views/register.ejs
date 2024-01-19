@@ -1,98 +1,101 @@
-<h1>Register</h1>
-<div class="registerBox">
-    <form action="/register" method="post" class="register">
-        <div class="regInput">
-            <label for="name">Name:</label>
-            <% if(locals.err1){ %>
-                <% if(locals.err1 !== 0){ %>
-                    <div class="inputGroup error">
+<div class="registerPage">
+
+    <h1>Register</h1>
+    <div class="registerBox">
+        <form action="/register" method="post" class="register">
+            <div class="regInput">
+                <label for="name">Name:</label>
+                <% if(locals.err1){ %>
+                    <% if(locals.err1 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-                <input type="text" name="name" id="name" required value = <%= (locals.name?locals.name:'') %>>
-                <div class="error-msg"><%= locals.err1 %></div>
+                    <input type="text" name="name" id="name" required value = <%= (locals.name?locals.name:'') %>>
+                    <div class="error-msg"><%= locals.err1 %></div>
+                </div>
             </div>
-        </div>
-        <div class="regInput">
-            <label for="lName">Last name:</label>
-            <% if(locals.err2){ %>
-                <% if(locals.err2 !== 0){ %>
-                    <div class="inputGroup error">
+            <div class="regInput">
+                <label for="lName">Last name:</label>
+                <% if(locals.err2){ %>
+                    <% if(locals.err2 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-                <input type="text" name="lName" id="lName" required value = <%= (locals.lName?locals.lName:'') %>>
-                <div class="error-msg"><%= locals.err2 %></div>
+                    <input type="text" name="lName" id="lName" required value = <%= (locals.lName?locals.lName:'') %>>
+                    <div class="error-msg"><%= locals.err2 %></div>
+                </div>
             </div>
-        </div>
-        <div class="regInput">
-            <label for="email">Email:</label>
-            <% if(locals.err3){ %>
-                <% if(locals.err3 !== 0){ %>
-                    <div class="inputGroup error">
+            <div class="regInput">
+                <label for="email">Email:</label>
+                <% if(locals.err3){ %>
+                    <% if(locals.err3 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-            <input type="email" name="email" id="email" required value = <%= (locals.email?locals.email:'') %>>
-                <div class="error-msg"><%= locals.err3 %></div>
+                <input type="email" name="email" id="email" required value = <%= (locals.email?locals.email:'') %>>
+                    <div class="error-msg"><%= locals.err3 %></div>
+                </div>
             </div>
-        </div>
-        <div class="regInput">
-            <label for="konamiID">Konami ID:</label>
-            <% if(locals.err4){ %>
-                <% if(locals.err4 !== 0){ %>
-                    <div class="inputGroup error">
+            <div class="regInput">
+                <label for="konamiID">Konami ID:</label>
+                <% if(locals.err4){ %>
+                    <% if(locals.err4 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-            <input type="text" name="konamiID" id="konamiID" required value = <%= (locals.konamiID?locals.konamiID:'') %>>
-                <div class="error-msg"><%= locals.err4 %></div>
+                <input type="text" name="konamiID" id="konamiID" required value = <%= (locals.konamiID?locals.konamiID:'') %>>
+                    <div class="error-msg"><%= locals.err4 %></div>
+                </div>
             </div>
-        </div>
-        <div class="regInput">
-            <label for="password">Password:</label>
-            <% if(locals.err5){ %>
-                <% if(locals.err5 !== 0){ %>
-                    <div class="inputGroup error">
+            <div class="regInput">
+                <label for="password">Password:</label>
+                <% if(locals.err5){ %>
+                    <% if(locals.err5 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-            <input type="password" name="password" id="password" required value = <%= (locals.password?locals.password:'') %>>
-                <div class="error-msg"><%= locals.err5 %></div>
+                <input type="password" name="password" id="password" required value = <%= (locals.password?locals.password:'') %>>
+                    <div class="error-msg"><%= locals.err5 %></div>
+                </div>
             </div>
-        </div>
-        <div class="regInput">
-            <label for="password2">Re-enter password:</label>
-            <% if(locals.err6){ %>
-                <% if(locals.err6 !== 0){ %>
-                    <div class="inputGroup error">
+            <div class="regInput">
+                <label for="password2">Re-enter password:</label>
+                <% if(locals.err6){ %>
+                    <% if(locals.err6 !== 0){ %>
+                        <div class="inputGroup error">
+                    <% } else { %>
+                        <div class="inputGroup">
+                    <% } %>
                 <% } else { %>
                     <div class="inputGroup">
                 <% } %>
-            <% } else { %>
-                <div class="inputGroup">
-            <% } %>
-            <input type="password" name="password2" id="password2" required value = <%= (locals.password2?locals.password2:'') %>>
-                <div class="error-msg"><%= locals.err6 %></div>
+                <input type="password" name="password2" id="password2" required value = <%= (locals.password2?locals.password2:'') %>>
+                    <div class="error-msg"><%= locals.err6 %></div>
+                </div>
             </div>
-        </div>
-        <button type="submit">Register</button>
-    </form>
-    <a href="/login">Login Page</a>
-    <br>
+            <button type="submit">Register</button>
+        </form>
+        <a href="/login">Login Page</a>
+        <br>
+    </div>
 </div>

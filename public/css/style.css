@@ -1,9 +1,22 @@
 body{
-    max-width: 25%;
     background-color: rgb(231, 240, 241);
 }
 
+@media screen and (min-width:800px) {
+    .registerPage {
+        margin-left: 35%;
+        width: 40%;
+    }
+}
+
+.registerPage{
+    min-width: 325px;
+}
+
 .registerBox{
+
+    max-width: 400px;
+    min-width: 312px;
     border: 1px black solid;
     padding: 5px;
     padding-bottom: 10px;
